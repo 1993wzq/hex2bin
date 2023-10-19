@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+
+
+<GPULSE_BUILD>
+
+	<PROJECTS>
+		<PROJECT name="hex2bin" platform="MinGW">
+			<BC name="cmdoptios"  />
+			<BC name="common"  />
+			<BC name="iniconfig"  />
+			<BC name="logger"  />
+			<BC name="generator"  />
+			<BC name="hex"  />
+			<BC name="GACmain"  />
+			<BC name="testcpp"  /> 
+		</PROJECT>		
+	</PROJECTS>
+
+	<TOOLS>
+		<COMPILER name="GNU">
+			<BIN_PATH>C:/MinGW/bin</BIN_PATH>
+			<CC>gcc.exe</CC> 	<!-- for C language compile-->
+			<CPP>g++.exe</CPP>	<!-- for C++ language compile-->
+			<AR>ar.exe</AR>	<!-- for object archive -->
+			<LD>ld.exe</LD>	<!-- for object and lib link -->
+			
+			<LANGUAGE name="c" >
+				<SUFFIX>.c</SUFFIX>	
+				<COMPILE_FLAGS cflag="FLAG_0">
+					<ADD_MACRO name="__GNU__0" />
+					<ADD_MACRO name="__CPU__0" value="TC27x"/>
+					<ADD_INCLUDE>C:/MinGW1</ADD_INCLUDE>
+					<ADD_INCLUDE>C:/MinGW2</ADD_INCLUDE>
+					<ADD_FLAG>-c</ADD_FLAG>
+					<ADD_FLAG>-O0 -g </ADD_FLAG>
+					<ADD_FLAG>-DCRC_BLOCK_SIZE=256u</ADD_FLAG>
+					<ADD_FLAG>-MMD -MF $$(basename $$@).mak</ADD_FLAG> 
+					<ADD_FLAG>@_gen/mak/incs.mak</ADD_FLAG>
+				</COMPILE_FLAGS>
+				<COMPILE_FLAGS cflag="FLAG_2">
+					<ADD_MACRO name="__GNU_2_" />
+					<ADD_MACRO name="__CPU__2" value="TC27x"/>
+					<ADD_INCLUDE>C:/MinGW4</ADD_INCLUDE>
+					<ADD_INCLUDE>C:/MinGW3</ADD_INCLUDE>
+					<ADD_FLAG>-c</ADD_FLAG>
+					<ADD_FLAG>-O2</ADD_FLAG>		
+					<!-- <ADD_FLAG>-MMD -MF</ADD_FLAG> -->
+					<ADD_FLAG>@_gen/mak/incs.mak</ADD_FLAG>
+				</COMPILE_FLAGS>
+				<COMPILE_FLAGS cflag="FLAG_3">
+					<ADD_MACRO name="__CPU__3" />
+					<ADD_MACRO name="__CPU__3" value="TC27x"/>
+					<ADD_INCLUDE>C:/MinGW5</ADD_INCLUDE>
+					<ADD_INCLUDE>C:/MinGW6</ADD_INCLUDE>
+					<ADD_FLAG>-c</ADD_FLAG>
+					<!-- <ADD_FLAG>-MMD -MF</ADD_FLAG> -->
+					<ADD_FLAG>-O3</ADD_FLAG>		
+					<ADD_FLAG>@_gen/mak/incs.mak</ADD_FLAG>					
+				</COMPILE_FLAGS>
+				<COMPILE_FLAGS cflag="FLAG_4">
+					<ADD_MACRO name="__CPU_4_" />
+					<ADD_MACRO name="__CPU_4_" value="TC27x"/>
+					<ADD_INCLUDE>C:/MinGW7</ADD_INCLUDE>
+					<ADD_INCLUDE>C:/MinGW8</ADD_INCLUDE>
+					<ADD_FLAG>-c -g</ADD_FLAG>
+					<ADD_FLAG>-O4</ADD_FLAG>
+					<!-- <ADD_FLAG>-MMD -MF</ADD_FLAG> -->
+					<ADD_FLAG>@_gen/mak/incs.mak</ADD_FLAG>	
+				</COMPILE_FLAGS>	
+				<COMPILE_FLAGS cflag="FLAG_7">
+					<ADD_MACRO name="__CPU_5_" />
+					<ADD_MACRO name="__CPU_5_" value="TC27x"/>
+					<ADD_INCLUDE>C:/MinGW52</ADD_INCLUDE>
+					<ADD_INCLUDE>C:/MinGW55</ADD_INCLUDE>
+					<ADD_FLAG>-c</ADD_FLAG>
+					<ADD_FLAG>-Os</ADD_FLAG>
+				<!-- 	<ADD_FLAG>-MMD -MF</ADD_FLAG> -->
+					<ADD_FLAG>@_gen/mak/incs.mak</ADD_FLAG>	
+				</COMPILE_FLAGS>					
+			</LANGUAGE>
+			
+			
+			<LINK_FLAGS>
+				<LINK_FLAG linkflag="LFLAG_0" >
+					<ADD_MACRO name="__CPU1__" />
+					<ADD_MACRO name="__CPU__" value="TC27x"/>
+					<ADD_LINK_FILE></ADD_LINK_FILE>
+					<ADD_LINK_INCLUDE></ADD_LINK_INCLUDE>
+					<ADD_LIBPATH>C:/MinGW</ADD_LIBPATH>
+					<ADD_FLAG>-Os icons/demo.o</ADD_FLAG>
+					<ADD_FLAG>-Wl,--stack=0x100000000</ADD_FLAG>
+					<!-- <ADD_FLAG>-MMD -MF</ADD_FLAG> -->
+					<!-- <ADD_FLAG>-fno-jump-tables</ADD_FLAG> -->
+					<ADD_OBJ_FILE> </ADD_OBJ_FILE>
+					<ADD_OBJ_FILE> </ADD_OBJ_FILE>
+					<ADD_LIB_FILE></ADD_LIB_FILE>			
+				</LINK_FLAG>
+			</LINK_FLAGS>			
+		</COMPILER>
+	</TOOLS>
+
+	<PLATFORMS>
+		<PLATFORM name="Aurix">
+			<COMPILER suffix=".elf">TASKING</COMPILER> <!-- HIGHTEC ,,donot contaisn space! -->
+		</PLATFORM>
+		
+		<PLATFORM name="VxWorks">
+			<COMPILER>CLANG</COMPILER>
+		</PLATFORM>	
+		
+		<PLATFORM name="MinGW">
+			<COMPILER suffix=".exe">GNU</COMPILER>
+		</PLATFORM>		
+	</PLATFORMS>	
+</GPULSE_BUILD>
+
