@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <assert.h>
 
+#define GGSB 1
 
 typedef uint64_t uint64;
 typedef uint32_t uint32;
