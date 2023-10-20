@@ -5,6 +5,7 @@
 #include <assert.h>
 
 #define GGSB 1
+#define GPMAKE 2
 
 typedef uint64_t uint64;
 typedef uint32_t uint32;
