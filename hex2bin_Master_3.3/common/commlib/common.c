@@ -4,6 +4,7 @@
 #include <time.h>
 #include "common.h"
 
+
 uint32 str2hex(const char * str)
 {
 	return ((uint32) strtoul( str, NULL, 16 )) ;
