@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include <time.h>
 #include "common.h"
+
 
 
 uint32 str2hex(const char * str)
