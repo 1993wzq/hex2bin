@@ -4,9 +4,14 @@
 <GPULSE_BUILD>
 	<PROJECTS>
 		<PROJECT name="Hex2BinTest" platform="MinGW">
-			<BC name="folder1" />
-			<BC name="folder2" />
-			<BC name="folder3" />
+			<BC name="cmdoptios"  />
+			<BC name="common"  />
+			<BC name="iniconfig"  />
+			<BC name="logger"  />
+			<BC name="generator"  />
+			<BC name="hex"  />
+			<BC name="GACmain"  />
+			<BC name="testcpp"  /> 
 		</PROJECT>		
 	</PROJECTS>
 
@@ -56,10 +61,10 @@
 				</LINK_FLAG>
 			</LINK_FLAGS>	
 
-			<POST_BUILDS>
-				<POST_BUILD>where make</POST_BUILD>
+			<!-- <POST_BUILDS> -->
+				<!-- <POST_BUILD>where make</POST_BUILD> -->
 				<!-- <POST_BUILD>post-build.bat</POST_BUILD> -->
-			</POST_BUILDS>			
+			<!-- </POST_BUILDS>			 -->
 		</COMPILER>
 	</TOOLS>
 
