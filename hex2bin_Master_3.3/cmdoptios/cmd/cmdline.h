@@ -1,5 +1,5 @@
 
-
+#define N 100
 
 #ifndef __CMDOPTION__
 #define __CMDOPTION__
