@@ -10,7 +10,7 @@
 #include "blockhex.h"
 
 
-#define M 10
+//#define M 10
 
 void getCmdlineInfo(int argc, char ** argv,EnvArgs *par)
 {
